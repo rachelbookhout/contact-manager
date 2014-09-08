@@ -1,6 +1,20 @@
-<form action = "/new" method - "post">
+<form action = "/new" method = "post">
 <h1> New Person? </h1>
-<p>First Name <input type = "text" id = "first_name"/></p>
-<p>Last Name <input type = "text" id = "last_name"/></p>
-<p>Phone Number <input type = "text" id = "phone_number"/></p>
+
+<div class="field">
+  <label for="first_name">First Name</label>
+  <input type = "text" name="contact[first_name]" id="first_name" />
+</div>
+
+<div class= "field">
+  <label for "last_name">Last Name </label>
+  <input type = "text" name="contact[last_name]" id="last_name"/>
+</div>
+
+<div class = "field">
+  <label for "phone_number">Phone Number</label>
+  <input type = "text" name="contact[phone_number]" id="phone_number"/></p>
+</div>
+
+<input type = "submit"/>
 </form>

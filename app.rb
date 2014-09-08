@@ -21,9 +21,7 @@ erb :new
 end
 
 post '/new' do
-@firstname = params["first_name"]
-@lastname = params["last_name"]
-@phonenumber = params["phone_number"]
-# add to database/add to contact.all
-redirect '/'
+  @record = Contact.new(params[:contact])
+  @record.save
+  redirect '/'
 end
