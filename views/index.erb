@@ -5,7 +5,12 @@
   <input type='submit' value='Search'>
 </form>
 
-
+<ul>
+  <li><a href="/?page=<%= params[:page].to_i + 1 %>">Next</a></li>
+  <% if params[:page] && params[:page] != '1' %>
+    <li><a href="/?page=<%= params[:page].to_i - 1 %>">Back</a></li>
+  <% end %>
+</ul>
 
 <ul>
   <% @contacts.each do |contact| %>
