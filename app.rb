@@ -5,8 +5,13 @@ require 'pry'
 
 require_relative 'models/contact'
 
+
 get '/' do
+if params[:query]
+  @contacts = Contact.where(first_name: params[:query]) || Contact.where(last_name: params[:query])
+else
   @contacts = Contact.all
+ end
   erb :index
 end
 
